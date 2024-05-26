@@ -31,8 +31,8 @@ from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
-API_IP = 'X.X.X.X'    #local IP
-API_PORT = 3035            #local port
+API_IP = '192.168.0.160'    #local IP
+API_PORT = 53035            #local port
 Massa_Address = str("AU......paV") 
 password = str("xxxxxxx")
 
@@ -49,7 +49,7 @@ def get_status():
     }
     response = requests.post((f'http://{API_IP}:{API_PORT}'), headers=headers, json=json_data)
     json_str= json.loads(response.text)
-    #print(json.dumps(json_str, indent=2))
+    print(json.dumps(json_str, indent=2))
 
     node_id = json_str["result"]["node_id"]
     node_ip = json_str["result"]["node_ip"]
@@ -117,5 +117,5 @@ else:
     print("Not enought roll")
     logger.info(datetime.now().strftime('%d/%m/%Y %H:%M:%S'))
     logger.info("Not enought roll")
-
+ 
 exit
