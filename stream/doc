@@ -1,0 +1,47 @@
+Je vais vous expliquer étape par étape comment exécuter ce programme :
+
+1. D'abord, créez un nouveau dossier et initialisez un projet Node.js :
+```bash
+mkdir weather-streamr
+cd weather-streamr
+npm init -y
+```
+
+2. Installez la dépendance nécessaire :
+```bash
+npm install @streamr/sdk
+```
+
+3. Créez un fichier `index.js` et copiez-y le code que je vous ai fourni précédemment.
+
+4. Si vous avez besoin d'utiliser une clé privée, créez un fichier `.env` à la racine du projet :
+```bash
+echo "PRIVATE_KEY=votre_clé_privée" > .env
+```
+Et installez dotenv :
+```bash
+npm install dotenv
+```
+
+Puis ajoutez cette ligne au début de votre `index.js` :
+```javascript
+require('dotenv').config();
+```
+
+5. Pour exécuter le programme :
+```bash
+node index.js
+```
+
+Le programme va alors :
+- Se connecter au stream Streamr
+- Afficher "Abonnement réussi au flux météo" si la connexion est établie
+- Commencer à afficher les données météo dans la console quand elles sont reçues
+- Vous pouvez arrêter le programme avec Ctrl+C
+
+Pour le laisser tourner en arrière-plan sur un serveur, vous pouvez utiliser PM2 :
+
+```bash
+npm install -g pm2
+pm2 start index.js --name "weather-streamr"
+```
