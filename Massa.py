@@ -31,10 +31,10 @@ from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
-API_IP = '192.168.0.160'    #local IP
+API_IP = '192.168.0.1.149'    #local IP
 API_PORT = 53035            #local port
-Massa_Address = str("AU......paV") 
-password = str("xxxxxxx")
+Massa_Address = str("AU1xxxxxxx4paV") 
+password = str("xxxxx")
 
 ######################################################################################
 def get_status():
