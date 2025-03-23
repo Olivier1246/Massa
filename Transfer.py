@@ -5,9 +5,9 @@ url = "http://192.168.0.145:53037/v1/nodes"
 
 # Définissez les paramètres de la requête
 params = {
-    "address": "AU1xAusfDBmWttrr1Mqo2aYzAZk5tkMQUjYw6adzPwYHVxx24paV",
+    "address": "AU1xxxxxxpaV",
     "amount": 100,
-    "destination": "AU1qmcb5431Fm1MMbfoof3qYLYoxGhuDA1JU2nvMJ8uAiRThVwmC"
+    "destination": "AU1xxxxxxwmC"
 }
 
 # Envoyez la requête POST à l'API
